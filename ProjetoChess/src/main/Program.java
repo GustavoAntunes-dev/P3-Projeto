@@ -1,11 +1,12 @@
 package main;
 
+import boardgame.Board;
 import boardgame.Position;
 
 public class Program {
-    public static void main(String[] args) throws Exception {
-        Position pos = new Position(3, 6);
+    public static void main(String[] args) {
+        
 
-        System.out.println(pos);
+        
     }
 }

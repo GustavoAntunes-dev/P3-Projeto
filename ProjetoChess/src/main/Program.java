@@ -1,7 +1,7 @@
 package main;
 
-import boardgame.Board;
-import boardgame.Position;
+import BoardGame.Board;
+import BoardGame.Position;
 
 public class Program {
     public static void main(String[] args) {

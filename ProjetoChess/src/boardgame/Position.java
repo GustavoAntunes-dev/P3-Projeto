@@ -1,4 +1,4 @@
-package boardgame;
+package BoardGame;
 
 public class Position {
 
@@ -8,7 +8,7 @@ public class Position {
         this.row = row;
         this.column = column;
     }
-    public int getRow() {
+    public int getRows() {
         return row;
     }
     public void setRow(int row) {

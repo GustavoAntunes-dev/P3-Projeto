@@ -12,6 +12,9 @@ public class UserInterface {
              System.out.println();
         }
         System.out.println("  a b c d e f g h");
+        System.out.println();
+        System.out.println("-----CHESS P3-----");
+        System.out.println();
     }
     
     private static void printPiece(ChessPiece piece){

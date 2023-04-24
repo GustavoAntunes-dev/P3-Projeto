@@ -12,7 +12,7 @@ public class Tower extends ChessPiece {
     }
     @Override
     public String toString(){
-        return "T ";
+        return "T";
     }
     
 }

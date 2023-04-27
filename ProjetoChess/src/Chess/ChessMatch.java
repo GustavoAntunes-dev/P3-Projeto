@@ -1,8 +1,7 @@
 package Chess;
 
 import BoardGame.Board;
-import BoardGame.Piece;
-import BoardGame.Position;
+
 import ChessPieces.King;
 import ChessPieces.Tower;
 
@@ -32,6 +31,7 @@ private void placeNewPiece(char column, int row, ChessPiece piece){
     private void iniatalSetup() {
         placeNewPiece('b', 6, new Tower(board, Color.WHITE));
         placeNewPiece('e', 8, new King(board, Color.BLACK));
-        placeNewPiece('e', 1, new King(board, Color.WHITE));
+        placeNewPiece('e', 7  ,new King(board, Color.WHITE));
+        placeNewPiece('c', 6, new Tower(board, Color.BLACK));
     }
 }

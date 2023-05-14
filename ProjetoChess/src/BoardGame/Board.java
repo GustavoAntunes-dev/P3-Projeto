@@ -15,7 +15,7 @@ public class Board {
         pieces = new Piece[rows][columns];
     }
 
-    public int getrow() {
+    public int getRow() {
         return rows;
     }
 

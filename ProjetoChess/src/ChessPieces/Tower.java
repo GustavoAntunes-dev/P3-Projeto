@@ -17,12 +17,13 @@ public class Tower extends ChessPiece {
     }
     @Override
     public boolean[][] possibleMoves() {
-        boolean[][] mat = new boolean[getBoard().getrow()][getBoard().getColumn()];
+        boolean[][] mat = new boolean[getBoard().getRow()][getBoard().getColumn()];
         Position p = new Position(0, 0);
         //above
         p.setValues(position.getRow() -1, position.getColumn());
+        
         while(getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)){
-            mat[p.getRow()][p.getColumn()]= true;
+            mat[p.getRow()][p.getColumn()] = true;
             p.setRow(p.getRow() -1);
         }
         if(getBoard().positionExists(p) && isThereOpponentPiece(p)){
@@ -30,6 +31,7 @@ public class Tower extends ChessPiece {
         }
        //left
        p.setValues(position.getRow(), position.getColumn() -1);
+       
        while(getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)){
            mat[p.getRow()][p.getColumn()]= true;
            p.setColumn(p.getColumn() -1);
@@ -39,6 +41,7 @@ public class Tower extends ChessPiece {
        }
        //right
        p.setValues(position.getRow(), position.getColumn() +1);
+       
        while(getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)){
            mat[p.getRow()][p.getColumn()]= true;
            p.setColumn(p.getColumn() +1);
@@ -48,6 +51,7 @@ public class Tower extends ChessPiece {
        }
        //below
        p.setValues(position.getRow() +1, position.getColumn());
+       
        while(getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)){
            mat[p.getRow()][p.getColumn()]= true;
            p.setRow(p.getRow() +1);

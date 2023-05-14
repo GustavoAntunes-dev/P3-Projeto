@@ -19,7 +19,7 @@ public class Bishop extends ChessPiece {
 
     @Override
     public boolean[][] possibleMoves() {
-        boolean[][] mat = new boolean[getBoard().getrow()][getBoard().getColumn()];
+        boolean[][] mat = new boolean[getBoard().getRow()][getBoard().getColumn()];
         return null;
     }
 }

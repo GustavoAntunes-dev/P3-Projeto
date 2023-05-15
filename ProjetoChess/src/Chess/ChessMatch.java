@@ -7,12 +7,12 @@ import java.util.stream.Collectors;
 import BoardGame.Board;
 import BoardGame.Piece;
 import BoardGame.Position;
-import ChessPieces.Bishop;
-import ChessPieces.Horse;
-import ChessPieces.King;
-import ChessPieces.Pawn;
-import ChessPieces.Quenn;
-import ChessPieces.Tower;
+import Chess.ChessPieces.Bishop;
+import Chess.ChessPieces.Horse;
+import Chess.ChessPieces.King;
+import Chess.ChessPieces.Pawn;
+import Chess.ChessPieces.Quenn;
+import Chess.ChessPieces.Tower;
 
 public class ChessMatch {
     private Board board;

@@ -129,7 +129,23 @@ public class ChessMatch {
 			ChessPiece tower = (ChessPiece)board.removePiece(sourceT);
 			board.placePiece(tower, targetT);
 			tower.increaseMoveCount();
-		}	
+		}
+        //en passant
+
+        if(p instanceof Pawn){
+            if(source.getColumn() != target.getColumn() && capturedPiece == null){
+                Position pawnPosition;
+                if(p.getColor() == Color.WHITE){
+                    pawnPosition = new Position(target.getRow() + 1, target.getColumn());
+
+                }else{
+                    pawnPosition = new Position(target.getRow() - 1, target.getColumn());
+                    }
+                    capturedPiece = board.removePiece(pawnPosition);
+                    capturedPieces.add(capturedPiece);
+                    piecesOnTheBoard.remove(capturedPiece);
+                }
+            }
         return capturedPiece;
     }
 
@@ -152,8 +168,7 @@ public class ChessMatch {
 			board.placePiece(tower, sourceT);
 			tower.decreaseMoveCount();
 		}
-
-		//roque grande
+        //roque grande
 		if (p instanceof King && target.getColumn() == source.getColumn() - 2) {
 			Position sourceT = new Position(source.getRow(), source.getColumn() - 4);
 			Position targetT = new Position(source.getRow(), source.getColumn() - 1);
@@ -161,6 +176,21 @@ public class ChessMatch {
 			board.placePiece(tower, sourceT);
 			tower.decreaseMoveCount();
 		}
+        //en passant
+
+        if(p instanceof Pawn){
+            if(source.getColumn() != target.getColumn() && capturedPiece == null){
+                ChessPiece pawn = (ChessPiece)board.removePiece(target);
+                Position pawnPosition;
+                if(p.getColor() == Color.WHITE){
+                    pawnPosition = new Position(3, target.getColumn());
+
+                }else{
+                    pawnPosition = new Position(4, target.getColumn());
+                    }
+                    board.placePiece(pawn, pawnPosition);
+                }
+            }
     }
     private void validateSourcePosition(Position position){
         if(!board.thereIsAPiece(position)){

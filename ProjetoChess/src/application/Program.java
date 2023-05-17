@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-import BoardGame.Board;
 import Chess.ChessException;
 import Chess.ChessMatch;
 import Chess.ChessPiece;
